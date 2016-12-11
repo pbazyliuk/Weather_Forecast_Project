@@ -1,0 +1,946 @@
+/*************************************************
+**************************************************
+	Website Name: Weather Forecast
+	Website URL: 
+	Website Author: Pavlo Bazyliuk
+	Copyright 2016. All Rights Reserved.
+**************************************************
+*************************************************/
+
+
+/***************************
+	1. General Styles
+	2. Index Page Styles
+	3. About Page Styles
+	4. Contacts Page Styles
+	5. Search Page Styles
+	6. Details Page Styles
+***************************/
+
+
+/***************************
+	Color Guide
+	***************
+	f0f0f0 - White
+	ff7932 - Orange
+	3d5c6d - Dark Blue
+	f9ad81 - Light Red
+	d7d7d7 - Light Gray
+***************************/
+
+
+
+/****************************
+*****************************
+	1. General Styles
+*****************************
+****************************/
+
+html, 
+body {
+	min-width: 1200px;
+	width: 100%;
+	max-height: 100vh;
+	margin: 0;
+	padding: 0;	
+	font-size: 62.5%;	/* 1rem = 10px */	
+}
+
+body {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 1.6rem;
+	color: #f0f0f0;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.not-active {
+  	pointer-events: none;
+   	cursor: default;
+}
+
+#highlight {
+	color: #ff7932;
+}
+
+#highlight-menu {
+	color: #ff7932;
+}
+
+
+
+/****************************
+*****************************
+	2. Index Page Styles
+*****************************
+****************************/
+
+
+/*** Header styles ***/
+
+.main-header {
+	min-height: 7vh;
+	background: #3d5c6d;
+}
+
+.main-logo-container {
+	width: 377px;
+	padding-left: 93px;
+	padding-top: 7px;
+	padding-bottom: 15px;
+	margin-right: 30px;
+	float: left;
+}
+
+.main-logo-container img {
+	width: 292px;
+	height: 40px;
+}
+
+.main-navigation {
+	width: 670px;
+	padding-top: 25px;
+	float: right;
+}
+
+.main-navigation ul {
+	margin: 0;
+	margin-right: 100px;
+	padding: 0;
+	float: right;
+	list-style: none;
+	font-size: 0;
+}
+
+.main-navigation ul li {
+	display: inline-block;
+	font-size: 1.8rem;
+	margin-right: 74px;
+	margin-left: -4px;
+} 
+
+.main-navigation ul li:last-child {
+	 margin-right: 0; 
+} 
+
+.main-navigation ul li a:link,
+.main-navigation ul li a:visited {	
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #d7d7d7;	
+}
+
+.main-navigation ul li a:hover {
+	color: #ff7932;
+	transition: color 0.2s;
+} 
+
+
+/*** Main Content styles ***/
+
+.main-content {
+	background-color: #ff7932;
+	min-height: 80vh;
+}
+
+.main-heading-container {
+	width: 570px;
+	margin: 0 auto;
+	padding-top: 84px;
+	padding-bottom: 37px;
+	text-align: center;
+}
+
+.main-heading-container h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 5.4rem;
+	line-height: 7.2rem;
+	font-weight: 300;
+}
+
+.main-photo-container {
+	width: 326px;
+	height: 255px;
+	margin: 0 auto;
+}
+
+.main-photo-container svg {
+	width: 326px;
+	height: 255px;
+}
+
+
+/*** Main photo svg styles & animation ***/
+
+.cloud-red {
+	fill:#F6AC82;
+}
+
+.sun-circle, .sun-ray {
+	fill:#E8DD15;
+}
+
+.cloud-white{
+	fill:#F0F0EF;
+}
+
+.cloud-grey{
+	fill:#D7D8D7;
+}
+
+.clouds-shadow{
+	fill:#E6631E;
+}
+
+.main-photo {
+	margin: auto;
+	display: block;
+
+}
+
+.sun-circle, 
+.sun-ray,
+.cloud-red,
+.cloud-white,
+.cloud-grey,
+.clouds-shadow {
+	transform-origin: 50% 50%;
+}
+
+.cloud-red,
+.sun-circle, 
+.sun-ray,
+.cloud-white,
+.cloud-grey {
+	animation: grow .8s ease-out backwards;
+}
+
+.clouds-shadow {
+	animation: grow 2.5s ease-out backwards;
+}
+
+.sun-circle {
+	animation-delay: .8s; 
+}
+
+.cloud-red {
+	animation-delay: 1.6s;	
+}
+
+.cloud-white {
+	animation-delay: 2.2s;
+	
+}
+
+.clouds-shadow {
+	animation-delay: 2s;
+}
+
+.cloud-grey {
+	animation-delay: 2.8s;
+	
+}
+
+.sun-ray {
+	animation-delay: 3.6s;
+	
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+	transform: scale(0); 
+  }
+
+  70% {
+  	opacity: 1;
+  	transform: scale(1);
+  }
+}
+
+.main-search-container {
+	width: 570px;
+	height: 45px;
+	margin: 0 auto;
+	padding-top: 56px;
+	padding-bottom: 100px;
+}
+
+.search-form {
+	font-size: 0;
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #f0f0f0;
+  font-weight: 300;
+  font-style: italic;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #f0f0f0;
+  font-weight: 300;
+}
+::-ms-input-placeholder { /* IE 10+ */
+  color: #f0f0f0;
+  font-weight: 300;
+}
+::-moz-placeholder { /* Firefox 18- */
+  color: #f0f0f0;
+  font-weight: 300;
+}
+
+.search-form input[type="text"] {
+	width: 340px;
+	height: 45px;
+	margin-right: 30px;
+	border: none;
+	border-radius: 5px;
+	padding: 0 15px;
+	font-size: 1.8rem;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 400;
+	color: #f0f0f0;
+	background-color: #f9ad81;
+}
+
+.search-form input[type="button"] {
+	width: 170px;
+	height: 45px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.8rem;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 300;
+	color: #f0f0f0;
+	background-color: #3d5c6d;
+} 
+
+.search-form input[type="button"]:hover {
+	color: #ff7932;
+}
+
+
+/*** Footer styles ***/
+
+.main-footer {
+	min-height: 13vh;
+	background: #3d5c6d;
+}
+
+.store-buttons-container {
+	width: 370px;
+	height: 45px;
+	line-height: 1;
+	margin-left: 100px;
+	float: left;
+	font-size: 0;
+	padding-top: 27px;
+}
+
+.app-store-sm-btn, 
+.google-play-sm-btn, 
+.css3-icon, 
+.html5-icon, 
+.javascript-icon,
+.jquery-icon,
+.d3-icon,
+.facebook-icon, 
+.google-icon, 
+.twitter-icon { 
+	display: inline-block; 
+	background: url('../img/spritesheet.png') no-repeat; 
+	overflow: hidden; 
+	text-indent: -9999px; 
+	text-align: left; 
+}
+
+.app-store-sm-btn { 
+	background-position: -10px -0px;
+	width: 125px;
+	height: 40px;
+	opacity: 0.7;
+	margin-right: 30px;
+}
+
+
+.google-play-sm-btn { 
+	background-position: -10px -50px; 
+	width: 125px; 
+	height: 40px;
+	opacity: 0.7; 
+}
+
+.social-icons-container {
+	width: 270px;
+	height: 31px;
+	padding-top: 37px;
+	padding-bottom: 25px;
+	float: right;
+	margin-right: 97px;
+	text-align: right;
+}
+
+.facebook-icon { 
+	background-position: -88px -100px; width: 31px; height: 31px; 
+	opacity: 0.7;  
+}
+
+.google-icon { 
+	background-position: -88px -141px; width: 31px; height: 31px; 
+	margin-right: 30px; 
+	opacity: 0.7;  
+}
+
+.twitter-icon { 
+	background-position: -88px -182px; width: 31px; height: 31px;
+	margin-right: 30px; 
+	opacity: 0.7; 
+}
+
+.app-store-sm-btn:hover,
+.google-play-sm-btn:hover,
+.facebook-icon:hover,
+.twitter-icon:hover,
+.google-icon:hover { 	
+	opacity: 1;
+	transition: opacity 0.2s;
+}
+
+.copyright-text-container {
+	clear: both;
+	text-align: center;
+}
+
+.copyright-text-container p {
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+
+
+/****************************
+*****************************
+	3. About Page Styles
+*****************************
+****************************/
+
+/*** Main Content styles ***/
+
+.about-main-container,
+.contacts-main-container {
+	width: 630px;
+	margin: 0 auto;
+}
+
+.contacts-main-container {
+	padding-bottom: 45px;
+}
+
+.about-heading-container h2,
+.contacts-heading-container h2 {
+	padding-top: 105px; /* 7vh */
+	padding-bottom: 36px;
+	margin: 0;
+	font-size: 40px;
+	line-height: 1;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 300;	
+}
+
+.about-main-container p {
+	font-size: 24px;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.technology-icons-container {
+	padding-top: 42px;
+	padding-bottom: 45px;
+}
+
+.css3-icon { 
+	background-position: -10px -100px; width: 68px; height: 97px;
+	width: 68px; 
+	height: 97px; 
+	margin-right: 50px; 
+}
+
+.html5-icon { 
+	background-position: -10px -314px; width: 68px; height: 97px; 
+	margin-right: 50px; 
+}
+
+.javascript-icon { 
+	background-position: -10px -421px; width: 68px; height: 97px;
+	margin-right: 50px; 
+}
+
+.jquery-icon {background-position: -10px -528px; width: 68px; height: 97px;
+	margin-right: 50px; 
+}
+
+.d3-icon {
+	background-position: -10px -207px; width: 68px; height: 97px;
+}
+
+
+
+/****************************
+*****************************
+	4. Contacts Page Styles
+*****************************
+****************************/
+
+
+/*** Main Content styles ***/
+
+.contacts-form {	
+ 	margin: 0 auto; 	
+}
+
+.contacts-form-container {
+ 	width: 630px;
+ 	border: 1px solid #f0f0f0;
+ 	border-radius: 5px;
+ 	border-radius: 5px;
+ 	margin-top: 7px;
+}
+
+.contacts-form-container input,
+.contacts-form-container textarea {
+	font-size: 1.8rem;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 400;
+	color: #f0f0f0;
+}
+
+.form-column-first {
+	float:left;
+	overflow: auto;
+}
+
+.form-column-first div:last-child {
+	margin-bottom: 30px;
+}
+
+.form-column-second {
+	float:left;
+}
+
+.contacts-form-container label {
+ 	display: block;
+ 	margin-bottom: 15px;
+ 	font-size: 1.8rem;
+ 	font-weight: 400;
+}
+
+.asterisk {
+ 	color: #E8DD10;
+ 	padding-left: 5px;
+}
+
+.user-name-field,
+.user-email-field ,
+.find-info-field {
+	margin: 24px 30px;
+}
+
+.form-column-first div:last-child {
+	margin-bottom: 30px;
+}
+
+.user-comment-field {
+	margin-top: 24px;
+}
+
+.user-name-field input,
+.user-email-field input,
+.find-info-field input,
+.user-comment-field textarea {
+	margin: 0;
+	padding: 0 15px;
+	border: none;
+	background-color: #f9ad81;
+	border-radius: 5px;
+	width: 240px;
+	height: 45px;
+}
+
+.user-comment-field textarea {
+	margin-right: 30px;
+	padding: 15px 15px 0;
+	height: 239px;
+	resize: none;
+}
+
+.required-fields-note {
+	margin-top: 12px;
+	margin-left: 25px;
+	font-size: 1.8rem;
+}
+
+.required-fields-note .info-note {
+	font-size: 1.4rem;
+}
+
+.submit-button {
+	text-align: right;
+}
+
+.submit-button input[type="submit"] {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 5px;
+	background-color: #3d5c6d;
+	color: #f0f0f0;
+	width: 155px;
+	height: 45px;
+	cursor: pointer;
+	font-size: 1.8rem;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 300;
+}
+
+.submit-button input[type="submit"]:hover {
+	color: #ff7932;
+	transition: 0.2s color;
+}
+
+
+
+/****************************
+*****************************
+	5. Search Page Styles
+*****************************
+****************************/
+
+
+/*** Main Content styles ***/
+
+.weather-forecast-container {
+	width: 970px;
+	min-height: 337px;
+	margin: 0 auto 70px;
+}
+
+.weather-forecast-details-container,
+.location,
+.graph-buttons-container {
+	width: 970px;
+	height: 337px;
+	margin: 0 auto;
+}
+
+.location {
+	height:auto;
+	font-size: 2rem;
+	padding: 10px 0;	
+}
+
+.weather-forecast-section {
+	width: 182px;
+	height: 337px;
+	background-color: #f9ad81;
+	border-radius: 5px;
+	text-align: center;
+	margin-right: 15px;
+	margin-bottom: 30px;
+	float: left;	
+}
+
+.weather-forecast-section:nth-child(5n + 5) {
+	margin-right: 0;
+}
+
+.weather-forecast-section:not(:nth-child(n+6)):hover {
+	box-shadow: 0 0 0 2px white;
+	cursor: pointer;
+}
+
+.weather-forecast-container .day,
+.weather-forecast-details-container .day {
+	font-size: 2.2rem;
+	font-weight: 400;
+	margin-top: 23px;
+}
+
+.weather-forecast-container .date,
+.weather-forecast-details-container .date {
+	font-size: 3.6rem;
+	font-weight: 400;
+	margin-top: 9px;
+	margin-bottom: 9px;
+}
+
+.weather-forecast-container .month,
+.weather-forecast-details-container .month {
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+.weather-forecast-container .condition-icon,
+.weather-forecast-details-container .condition-icon {
+	width: 93px;
+	height: 71px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 18px auto;
+}
+
+.weather-forecast-container .condition,
+.weather-forecast-details-container .condition {
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+}
+
+.weather-forecast-container .min-max,
+.weather-forecast-details-container .min-max {
+	font-size: 1.2rem;
+}
+
+.weather-forecast-container .min-max span:first-child,
+.weather-forecast-details-container .min-max span:first-child{
+	margin-right: 35px; 
+}
+
+.weather-forecast-container .temperatures,
+.weather-forecast-details-container .temperatures {
+	font-size: 2.7rem;
+	font-weight: 400;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+.weather-forecast-container .temperatures span:first-child,
+.weather-forecast-details-container .temperatures span:first-child {
+	margin-right: 20px; 
+}
+
+.weather-forecast-container .temperatures span:first-child .sign,
+.weather-forecast-details-container .temperatures span:first-child .sign,
+.weather-forecast-container .temperatures span:last-child .sign,
+.weather-forecast-details-container .temperatures span:last-child .sign {
+	margin-right: 0;
+}
+
+.day-buttons-container {
+	width: 970px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0;
+}
+
+.day-buttons-container .day-button {
+	width: 155px;
+	height: 45px;
+	vertical-align: middle;
+	border: 1px solid white;
+	background-color: transparent;
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 1.8rem;
+	font-weight: 300;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.day-buttons-container .day-button:hover:not(.active) {
+	font-weight: 400;
+	border: 2px solid white;
+	padding: 0;
+}
+
+.day-buttons-container .day-button:first-child {
+	margin-right: 30px;
+}
+
+.day-buttons-container .active {
+	font-weight: 400;
+	border: 2px solid white;
+	padding: 0;
+}
+
+
+
+/****************************
+*****************************
+	6. Details Page Styles
+*****************************
+****************************/
+
+
+/*** Main Content styles ***/
+
+.location-container {
+	padding-top: 100px;
+}
+
+.weather-forecast-details-container .weather-forecast-section {
+	width: 149px;
+	margin-bottom: 0;
+}
+
+.weather-forecast-details-container .weather-forecast-section:nth-child(5) {
+   margin-right: 15px;
+} 
+
+.weather-forecast-details-container .weather-forecast-section:last-child {
+	margin-right: 0px;
+}
+
+.weather-forecast-details-container .weather-forecast-section:hover {
+	cursor: default;
+	box-shadow: none;
+}
+
+.weather-forecast-details-container .details-values {
+	font-size: 1.6rem;
+	margin-top: 25px;
+}
+
+.weather-forecast-details-container .details-values:first-child {
+	margin-top: 30px;
+}
+
+.weather-forecast-section .per-hour-container {
+	float: left;
+	margin-left: 22px;
+	margin-right: 2px;
+	font-weight: 400;
+}
+
+.weather-forecast-section .per-hour-container:last-child {
+	float: right;
+	margin-left: 0;
+	margin-right: 0;
+	margin-right: 22px;
+}
+
+.weather-forecast-section .details-hour {
+	margin-top: 30px;
+}
+
+.weather-forecast-section .details-condition-icon img {
+	margin-top: 20px;	
+	width: 44px;
+	height: 30px;
+}
+
+.weather-forecast-section .details-condition {
+	margin-top: 16px;
+	font-weight: 300;
+	font-size: 1.5rem;
+}
+
+.weather-forecast-section .details-temperature {
+	font-size: 2.4rem;
+	font-weight: 400;
+	margin-top: 17px;
+}
+
+.details-temperature .sign {
+	font-size: 2rem;
+	margin: 0;
+}
+
+.weather-forecast-section .details-pressure {
+	margin-top: 23px;
+	font-weight: 300;
+}
+
+.weather-forecast-section .details-humidity {
+	margin-top: 23px;
+	font-weight: 300;
+}
+
+.weather-forecast-section .details-speed {
+	margin-top: 27px;
+	font-weight: 300;
+}
+
+.buttons-slide-container {
+	float: right;
+}
+
+.buttons-slide-container button {
+	width: 142px;
+	height: 45px;
+	background-color: #3d5c6d;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: #f0f0f0;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 1.8rem;
+}
+
+.buttons-slide-container button:first-child {
+	margin-right: 25px;
+}
+
+.buttons-slide-container button:hover {
+	color: #ff7932;
+}
+
+
+/*** Temperature Chart styles ***/
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    min-width: 420px;
+    padding-bottom: 337px;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.graph-buttons-container {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+.temperature-graph-container text {
+	position: absolute;
+	z-index: 10;
+	top: 15px;
+	margin-left: 133px;
+	font-size: 16px;
+}
+
+.temperature-graph {
+	position: relative;
+	background: #f9ad81;
+	width: 480px;
+	height: 341px;
+	float: left;
+	clear: both;
+}
+
+
+

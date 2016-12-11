@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather forecast</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container clearfix">
+            <div class="main-logo-container">
+                <a href="index.html"><img src="img/logo.png" width="292" height="40" alt="logo"></a>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a id="highlight-menu" class="not-active" href="#">contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <div class="contacts-main-container">
+                <div class="contacts-heading-container">
+                    <h2>Contacts</h2>
+                </div>
+                <form class="contacts-form" id="contacts-form-js" method="post" name="myEmailForm" action="form-to-email.php">
+                    <div class="contacts-form-container clearfix">
+                        <div class="form-column-first">
+                            <div class="user-name-field">
+                                <label for="user-name">Name<span class="asterisk">*</span></label>
+                                <input name="name" type="text" id="user-name" min="3" max="15" placeholder="Input your name" required>
+                            </div>
+                            <div class="user-email-field">
+                                <label for="user-email">Email<span class="asterisk">*</span></label>
+                                <input name="email" type="email" id="user-email" placeholder="Input your email" required>
+                            </div>
+                            <div class="find-info-field">
+                                <label for="find-info">How did you find us?!</label>
+                                <input name="question" type="text" id="find-info" list="find" placeholder="Choose your variant">
+                                <datalist id="find">
+                                    <option value="From friends">
+                                        <option value="Through Web search">
+                                            <option value="From social network">
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="form-column-second clearfix">
+                            <div class="user-comment-field">
+                                <label for="user-comment-field">Comment<span class="asterisk">*</span></label>
+                                <textarea name="comment" id="user-comment-field" cols="30" rows="10" placeholder="Write a few words..." required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="required-fields-note">
+                        <span class="asterisk">* </span><em class="info-note">required form fields</em>
+                    </div>
+                    <div class="submit-button">
+                        <input name='submit' id="submit" type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container clearfix">
+            <div class="main-footer-container">
+                <div class="store-buttons-container">
+                    <a href="https://www.appstore.com" class="app-store-sm-btn"></a>
+                    <a href="https://play.google.com" class="google-play-sm-btn"></a>
+                </div>
+                <div class="social-icons-container">
+                    <a class="google-icon" href="https://plus.google.com/"></a>
+                    <a class="twitter-icon" href="https://twitter.com"></a>
+                    <a class="facebook-icon" href="https://www.facebook.com"></a>
+                </div>
+                <div class="copyright-text-container">
+                    <p>2016 Copyright. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

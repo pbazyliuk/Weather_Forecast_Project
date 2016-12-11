@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather forecast</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container clearfix">
+            <div class="main-logo-container">
+                <a class="not-active" href="#"><img src="img/logo.png" width="292" height="40" alt="logo"></a>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a id="highlight-menu" class="not-active" href="index.html">home</a></li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="contacts.html">contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <div class="main-heading-container" id="main-heading-js">
+                <h1>What will the weather be like tomorrow?!</h1>
+            </div>
+            <div class="main-photo-container" id="main-photo-js">
+                <svg version="1.1" class="main-photo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 331.6 266.5" style="enable-background:new 0 0 331.6 266.5;" xml:space="preserve">
+                    <path class="cloud-red" d="M206.4,127.2h81c0,0,15.5-4.2,15.5-22s-17.5-19-17.5-19s0.8-24.1-24.4-31.7C235.7,46.8,223.5,73,223.5,73
+						s-15.1-3.4-19.5,13.5c0,0-18.3,3.4-15.1,25.8C188.9,112.4,194.1,127.2,206.4,127.2z" />
+                    <g class="sun">
+                        <circle class="sun-circle" cx="107.8" cy="101.7" r="38.3" />
+                        <path class="sun-ray" d="M48.7,120.4l-19.5,5.7c-3.5,1-7.2-1-8.3-4.5l-0.2-0.5c-1-3.5,1-7.2,4.5-8.3l19.5-5.7c3.5-1,7.2,1,8.3,4.5
+						l0.2,0.5C54.2,115.7,52.2,119.4,48.7,120.4z" />
+                        <path class="sun-ray" d="M47,89.4l-19.8-4.5c-3.6-0.8-5.8-4.4-5-8l0.1-0.6c0.8-3.6,4.4-5.8,8-5l19.8,4.5c3.6,0.8,5.8,4.4,5,8L55,84.3
+						C54.2,87.9,50.6,90.2,47,89.4z" />
+                        <path class="sun-ray" d="M60.6,61.4L45.5,47.9c-2.7-2.4-3-6.7-0.5-9.4l0.4-0.4c2.4-2.7,6.7-3,9.4-0.5l15.1,13.5c2.7,2.4,3,6.7,0.5,9.4
+						L70,60.9C67.6,63.6,63.4,63.9,60.6,61.4z" />
+                        <path class="sun-ray" d="M145.6,52.5l12.7-15.8c2.3-2.9,6.5-3.3,9.4-1l0.4,0.4c2.9,2.3,3.3,6.5,1,9.4l-12.7,15.8c-2.3,2.9-6.5,3.3-9.4,1
+						l-0.4-0.4C143.7,59.5,143.3,55.3,145.6,52.5z" />
+                        <path class="sun-ray" d="M117,40.3l3.4-20c0.6-3.6,4.1-6.1,7.7-5.4l0.6,0.1c3.6,0.6,6.1,4.1,5.4,7.7l-3.4,20c-0.6,3.6-4.1,6.1-7.7,5.4
+						l-0.6-0.1C118.8,47.4,116.3,44,117,40.3z" />
+                        <path class="sun-ray" d="M86.1,43.6l-6.7-19.1C78.2,21,80,17.2,83.5,16l0.5-0.2c3.5-1.2,7.3,0.6,8.5,4.1L99.2,39
+						c1.2,3.5-0.6,7.3-4.1,8.5l-0.5,0.2C91.1,48.9,87.3,47.1,86.1,43.6z" />
+                    </g>
+                    <path class="cloud-white" d="M61.8,205h152.5c0,0,29.1-7.7,29.1-39.8s-33-34.5-33-34.5s1.5-43.7-46-57.5s-70.5,33.7-70.5,33.7
+						s-28.4-6.1-36.8,24.5c0,0-34.5,6.1-28.4,46.7C28.9,178.2,38.8,205,61.8,205z" />
+                    <path class="cloud-grey" d="M156.5,212.4h132.7c0,0,25.3-6.7,25.3-34.7s-28.7-30-28.7-30s1.3-38-40-50S184.5,127,184.5,127
+						s-24.7-5.3-32,21.3c0,0-30,5.3-24.7,40.7C127.8,189,136.4,212.4,156.5,212.4z" />
+                    <path class="clouds-shadow" d="M156.5,245.7c0,0-82,2-117.3-9.3c0,0,14-15.3,156.7-6.7c0,0,74-10,98,4c0,0,0.7,3.3-12.7,5.3
+						c-13.3,2-1.3,3.3-1.3,3.3s6.7,2-18.7,6.7S161.1,250.4,156.5,245.7z" />
+                </svg>
+            </div>
+            <div class="main-search-container">
+                <form class="search-form" action="#" method="get">
+                    <input type="text" class="search-manual" id="search-field" placeholder="Input city, country, zip code">
+                    <input type="button" class="search-button" id="search-button-js" value="Search">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container clearfix">
+            <div class="main-footer-container">
+                <div class="store-buttons-container">
+                    <a href="https://www.appstore.com" class="app-store-sm-btn"></a>
+                    <a href="https://play.google.com" class="google-play-sm-btn"></a>
+                </div>
+                <div class="social-icons-container">
+                    <a class="google-icon" href="https://plus.google.com/"></a>
+                    <a class="twitter-icon" href="https://twitter.com"></a>
+                    <a class="facebook-icon" href="https://www.facebook.com"></a>
+                </div>
+                <div class="copyright-text-container">
+                    <p>2016 Copyright. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
