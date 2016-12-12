@@ -8,4 +8,4 @@ Fortunately, Firefox browser doesn’t have such limitations.
 detailed weather forecast for 5 days with data every 3 hours, 
 and temperature bar chart. This app also supports responsive design.
 
-Demo - http://pbazyliuk.github.io/Weather_Forecast_Project/
+http://pbazyliuk.github.io/Weather_Forecast_Project/
