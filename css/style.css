@@ -283,23 +283,6 @@ body {
 }
 
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #f0f0f0;
-  font-weight: 300;
-  font-style: italic;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #f0f0f0;
-  font-weight: 300;
-}
-::-ms-input-placeholder { /* IE 10+ */
-  color: #f0f0f0;
-  font-weight: 300;
-}
-::-moz-placeholder { /* Firefox 18- */
-  color: #f0f0f0;
-  font-weight: 300;
-}
 
 .search-form input[type="text"] {
 	width: 340px;
@@ -330,6 +313,27 @@ body {
 
 .search-form input[type="button"]:hover {
 	color: #ff7932;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #f0f0f0;
+  font-weight: 300;
+  
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #f0f0f0;
+  opacity: 1
+  font-weight: 300;
+}
+
+::-ms-input-placeholder { /* IE 10+ */
+  color: #f0f0f0;
+  font-weight: 300;
+}
+::-moz-placeholder { /* Firefox 18- */
+  color: #f0f0f0;
+  font-weight: 300;
+  opacity: 1
 }
 
 
